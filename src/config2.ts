@@ -30,9 +30,9 @@ const fields: FieldsDef = {
   address: "value",
 };
 
-export const config: ConfigData = new ConfigData({
+export const config2: ConfigData = new ConfigData({
   namedDatasets: ["update-me"],
-  htmlTitle: "Map 1",
+  htmlTitle: "Map Two",
   fields: fields,
   filterableFields: [],
   searchedFields: ["description"],
@@ -50,7 +50,7 @@ export const config: ConfigData = new ConfigData({
   ],
   showDatasetsPanel: false,
   showDirectoryPanel: false,
-  elem_id: "map-app-1",
+  elem_id: "map-app-2",
   //  customPopup: getPopup, // uncomment if custom popup wanted
   //  aboutHtml: about, // uncomment if custom about.html wanted
   ...versions,
