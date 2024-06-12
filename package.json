@@ -1,5 +1,5 @@
 {
-  "name": "UPDATE ME",
+  "name": "cwm-test-maps",
   "version": "0.1.0",
   "description": "UPDATE ME",
   "main": "src/index.ts",
@@ -15,7 +15,7 @@
   },
   "author": "Digital Commons Cooperative",
   "license": "UNLICENSED",
-  "repository": "github:DigitalCommons/UPDATE ME",
+  "repository": "github:DigitalCommons/cwm-test-maps",
   "dependencies": {
     "mykomap": "github:DigitalCommons/mykomap#semver:^3.1.7"
   }
