@@ -15,25 +15,25 @@ const baseUri = "https://update-me/some/path/";
 const rowToObj = mkObjTransformer<Row, InitiativeObj>({
   uri: T.prefixed(baseUri).from("Identifier"),
   name: T.text("").from("Name"),
-  address: T.text("").from("Address"),
+  // address: T.text("").from("Address"),
   lat: T.nullable.number(null).from("Latitude"),
   lng: T.nullable.number(null).from("Longitude"),
-  manLat: T.nullable.number(null).from("Geocoded Latitude"),
-  manLng: T.nullable.number(null).from("Geocoded Longitude"),
-  description: T.text("").from("Description"),
+  // manLat: T.nullable.number(null).from("Geocoded Latitude"),
+  // manLng: T.nullable.number(null).from("Geocoded Longitude"),
+  // description: T.text("").from("Description"),
 });
 
-type Dictionary<T> = Partial<Record<string, T>>;
-type FieldsDef = Dictionary<PropDef | "value">;
-const fields: FieldsDef = {
-  description: "value",
-  address: "value",
-};
+// type Dictionary<T> = Partial<Record<string, T>>;
+// type FieldsDef = Dictionary<PropDef | "value">;
+// const fields: FieldsDef = {
+//   description: "value",
+//   address: "value",
+// };
 
 export const config2: ConfigData = new ConfigData({
   namedDatasets: ["update-me"],
-  htmlTitle: "Map Two",
-  fields: fields,
+  htmlTitle: "Map Two - Test 50,000",
+  // fields: fields,
   filterableFields: [],
   searchedFields: ["description"],
   languages: ["EN"],
@@ -44,12 +44,14 @@ export const config2: ConfigData = new ConfigData({
       id: "data-exaple-update-me",
       label: "UPDATE ME",
       type: "csv",
-      url: "example.csv",
+      url: "test-50000.csv",
       transform: rowToObj,
     },
   ],
   showDatasetsPanel: false,
   showDirectoryPanel: false,
+  showSearchPanel: false,
+  showAboutPanel: false,
   elem_id: "map-app-2",
   //  customPopup: getPopup, // uncomment if custom popup wanted
   //  aboutHtml: about, // uncomment if custom about.html wanted

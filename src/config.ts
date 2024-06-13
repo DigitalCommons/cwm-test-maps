@@ -32,7 +32,7 @@ const fields: FieldsDef = {
 
 export const config: ConfigData = new ConfigData({
   namedDatasets: ["update-me"],
-  htmlTitle: "Map 1",
+  htmlTitle: "Map One - Test 10,000",
   fields: fields,
   filterableFields: [],
   searchedFields: ["description"],
@@ -44,12 +44,14 @@ export const config: ConfigData = new ConfigData({
       id: "data-exaple-update-me",
       label: "UPDATE ME",
       type: "csv",
-      url: "example.csv",
+      url: "test-10000.csv",
       transform: rowToObj,
     },
   ],
   showDatasetsPanel: false,
   showDirectoryPanel: false,
+  showSearchPanel: false,
+  showAboutPanel: false,
   elem_id: "map-app-1",
   //  customPopup: getPopup, // uncomment if custom popup wanted
   //  aboutHtml: about, // uncomment if custom about.html wanted

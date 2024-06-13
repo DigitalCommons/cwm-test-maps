@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- The <title> will be overridden by the value of htmlTitle (if there is one)
+		in config.json for the current variant of the map.
+		To see where this is done, grep for htmlTitle in the javascript source.
+		-->
+    <title>Map 5</title>
+
+    <!-- Advice from Leaflet for preparing for mobile use: -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="map-app/map-app.css" />
+    <style type="text/css">
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100vw;
+      }
+      #map-app-sidebar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map-app-5"></div>
+    <script src="map-app/map-app.js"></script>
+    <script>
+      const { webRun, config5 } = mykomapExports;
+      webRun(window, config5);
+    </script>
+  </body>
+</html>
