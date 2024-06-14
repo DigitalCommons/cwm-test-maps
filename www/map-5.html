@@ -28,9 +28,37 @@
       #map-app-sidebar {
         display: none;
       }
+      .back-button {
+        height: 46px;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: #141314;
+        color: #faf9f6;
+        border: 1px solid #3b3b3b;
+        font-size: 14px;
+        padding: 0 22px;
+        text-decoration: none;
+        transition: background-color 0.1s ease-in-out;
+        z-index: 1000;
+        border-radius: 23px;
+      }
+
+      .back-button::before {
+        content: "\279C";
+        margin-right: 10px;
+        transform: scale(-1);
+      }
+
+      .back-button:hover {
+        background-color: #3b3b3b;
+      }
     </style>
   </head>
   <body>
+    <a href="/" class="back-button">Map Directory</a>
     <div id="map-app-5"></div>
     <script src="map-app/map-app.js"></script>
     <script>

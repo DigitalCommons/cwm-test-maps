@@ -45,6 +45,7 @@ export const config3: ConfigData = new ConfigData({
       label: "UPDATE ME",
       type: "csv",
       url: "test-100000.csv",
+      // url: "test-1000.csv",
       transform: rowToObj,
     },
   ],
