@@ -32,7 +32,7 @@ const fields: FieldsDef = {
 
 export const config6: ConfigData = new ConfigData({
   namedDatasets: ["update-me"],
-  htmlTitle: "Map Four - Test 100,000",
+  htmlTitle: "Map Six - Test 1,000,000",
   fields: fields,
   filterableFields: [],
   searchedFields: ["description"],
@@ -44,8 +44,8 @@ export const config6: ConfigData = new ConfigData({
       id: "data-exaple-update-me",
       label: "UPDATE ME",
       type: "csv",
-      // url: "test-500000.csv",
-      url: "test-1000.csv",
+      url: "test-1000000.csv",
+      // url: "test-1000.csv",
       transform: rowToObj,
     },
   ],

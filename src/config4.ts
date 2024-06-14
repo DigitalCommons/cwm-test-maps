@@ -32,7 +32,7 @@ const fields: FieldsDef = {
 
 export const config4: ConfigData = new ConfigData({
   namedDatasets: ["update-me"],
-  htmlTitle: "Map Four - Test 100,000",
+  htmlTitle: "Map Four - Test 250,000",
   fields: fields,
   filterableFields: [],
   searchedFields: ["description"],
