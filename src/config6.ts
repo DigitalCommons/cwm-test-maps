@@ -53,7 +53,7 @@ export const config6: ConfigData = new ConfigData({
   showDirectoryPanel: false,
   showSearchPanel: false,
   showAboutPanel: false,
-  elem_id: "map-app-4",
+  elem_id: "map-app-6",
   //  customPopup: getPopup, // uncomment if custom popup wanted
   //  aboutHtml: about, // uncomment if custom about.html wanted
   ...versions,
