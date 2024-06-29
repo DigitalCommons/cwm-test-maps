@@ -7,7 +7,7 @@ import * as versions from "./version.json";
 
 //import about from "./about.html"; // Uncomment if custom about.html needed
 //import { getPopup } from './popup'; // Uncomment if custom popup needed
-import { InitiativeObj } from "mykomap/src/map-app/app/model/initiative";
+import { InitiativeObj } from  "mykomap/app/model/initiative";
 
 type Row = Record<string, string | null | undefined>;
 const baseUri = "https://update-me/some/path/";
