@@ -7,7 +7,7 @@
 		in config.json for the current variant of the map.
 		To see where this is done, grep for htmlTitle in the javascript source.
 		-->
-    <title>Home</title>
+    <title>Map 5</title>
 
     <!-- Advice from Leaflet for preparing for mobile use: -->
     <meta
@@ -16,122 +16,54 @@
     />
     <link rel="stylesheet" href="map-app/map-app.css" />
     <style type="text/css">
-      * {
-        box-sizing: border-box;
-      }
       body {
-        --color-dark-neutral: 59, 59, 59; /* #3b3b3b */
-      }
-      html,
-      body {
-        width: 100vw;
-        background-color: #141314;
         padding: 0;
         margin: 0;
       }
-      .map-directory {
-        width: 100%;
-        max-width: 800px;
-        margin: 50px auto 0;
-        text-align: center;
-        color: #faf9f6;
+      html,
+      body {
+        height: 100%;
+        width: 100vw;
       }
-      nav {
-        width: 100%;
-        margin-top: 20px;
+      #map-app-sidebar {
+        display: none;
       }
-      ul {
-        list-style-type: none;
-        display: grid;
-        width: fit-content;
-        grid-auto-flow: column;
-        margin: 0 auto;
-        padding: 0;
-      }
-      ul > li > a {
+      .back-button {
         height: 46px;
         display: flex;
         align-items: center;
-        border: 1px solid rgb(var(--color-dark-neutral));
-        border-right: 0;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: #141314;
+        color: #faf9f6;
+        border: 1px solid #3b3b3b;
         font-size: 14px;
         padding: 0 22px;
         text-decoration: none;
         transition: background-color 0.1s ease-in-out;
+        z-index: 1000;
+        border-radius: 23px;
       }
-      ul > li > a:hover {
-        background-color: rgb(var(--color-dark-neutral));
+
+      .back-button::before {
+        content: "\279C";
+        margin-right: 10px;
+        transform: scale(-1);
       }
-      ul > li:first-child > a {
-        border-top-left-radius: 23px;
-        border-bottom-left-radius: 23px;
-      }
-      ul > li:last-child > a {
-        border-top-right-radius: 23px;
-        border-bottom-right-radius: 23px;
-        border-right: 1px solid rgb(var(--color-dark-neutral));
-      }
-      .info {
-        width: 100%;
-        margin-top: 50px;
-      }
-      .info-text {
-        width: 620px;
-        margin: auto;
-        text-align: left;
-        line-height: 1.75;
-      }
-      .info-text ul {
-        display: unset;
-      }
-      b {
-        font-weight: 700;
+
+      .back-button:hover {
+        background-color: #3b3b3b;
       }
     </style>
   </head>
   <body>
-    <div class="map-directory">
-      <h1>Map Directory</h1>
-      <nav>
-        <ul>
-          <li><a href="map-1.html">10,000</a></li>
-          <li><a href="map-2.html">50,000</a></li>
-          <li><a href="map-3.html">100,000</a></li>
-          <li><a href="map-4.html">250,000</a></li>
-          <li><a href="map-5.html">500,000</a></li>
-          <li><a href="map-6.html">1,000,000</a></li>
-        </ul>
-      </nav>
-      <div class="info">
-        <h2>Performance &amp; Timing</h2>
-        <div class="info-text">
-          <p>
-            There are obviously some performance issues when it comes to the
-            larger datasources, with latter two (500,000 &amp; 1,000,000) being
-            unusable within the current setup, even with the datasource content
-            restricted to name and coordinates. This points very much to Nick's
-            conclusion that it's the rendering of the markers rather than the
-            datasources themselves, that are so process intensive. Also, load
-            times stop increasing linearly quite rapidly, with the size of datasources
-            we are using.
-          </p>
-          <p>
-            I have included two smaller datasources, of 10,000 and 50,000
-            entries, for comparison
-          </p>
-        </div>
-        <h2>Times</h2>
-        <div class="info-text">
-        <p>Obviously thw times below will vary due to differences in people's machines, but they provide a good indicator.</p>
-          <ul>
-            <li>10,000 &mdash; 2.5s</li>
-            <li>50,000 &mdash; 15s</li>
-            <li>100,000 &mdash; 45s</li>
-            <li>250,000: &mdash; 5m 4s</li>
-            <li>500,000: &mdash; 34m 11s, with another 2m 30 for the map tiles to load. However, this map was unusable, it was unable to move or zoom, closer to an image of map than a map, proper.</li>
-            <li>1,000,000 &mdash; unrealistic to test, given the above</li>
-          </ul>
-      </div>
-    </div>
+    <a href="./" class="back-button">Map Directory</a>
+    <div id="map-app-5"></div>
+    <script src="map-app/map-app.js"></script>
+    <script>
+      const { webRun, config5 } = mykomapExports;
+      webRun(window, config5);
+    </script>
   </body>
 </html>
