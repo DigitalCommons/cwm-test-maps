@@ -10,6 +10,8 @@
     "lib": ["DOM", "ES2021"],
     "allowJs": true,
     "resolveJsonModule": true,
-    "moduleResolution": "node"
+    "module": "esnext",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
   }
 }
